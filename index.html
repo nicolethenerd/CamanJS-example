@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf8">
+  <title>CamanJS - Interactive Examples</title>
+
+  <link href='//camanjs.com/assets/site-1b542f1b0b93339214d0e7a8e5f7b177.css' rel='stylesheet' type='text/css' />
+
+
+  <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Raleway:400,200,700' rel='stylesheet' type='text/css'>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+
+    <script type="text/javascript" src="js/caman.full.min.js"></script>
+  <script type="text/javascript" src="js/camanFiltering.js"></script>
+   
+    <script type="text/javascript">
+      Caman.DEBUG = true
+    </script>
+  
+</head>
+<body>
+  <div
+  id="HeaderContainer"
+  
+>
+  <div id="Header">
+    <div class="Left">
+      <h1>CamanJS</h1>
+    </div>
+    <div class="Right">
+      <ul>
+        <li >
+          <a href="/">Home</a>
+        </li>
+        <li class="Active">
+          <a href="/examples">Examples</a>
+        </li>
+        <li >
+          <a href="/guides">Guides</a>
+        </li>
+        <li >
+          <a href="/docs">Documentation</a>
+        </li>
+      </ul>
+    </div>
+    <div class="Clear"></div>
+
+    
+  </div>
+</div>
+
+<div id="Content">
+  <h3>Interactive Example</h3>
+  <p>Choose a filter and move the slider to see it in action. This is only a sample of the full power of CamanJS.</p>
+
+  <img
+    id="example" 
+    src="/images/example1_600.jpg"
+    data-caman-hidpi="/images/example1_1200.jpg"
+  >
+
+  <div id="Filters">
+  
+    <div class="Filter">
+      <div class="FilterName">
+        <p>brightness</p>
+      </div>
+
+      <div class="FilterSetting">
+        <input
+          type="range" 
+          min="-100"
+          max="100"
+          step="1"
+          value="0"
+          data-filter="brightness"
+        >
+        <span class="FilterValue">0</span>
+      </div>
+    </div>
+  
+    <div class="Filter">
+      <div class="FilterName">
+        <p>contrast</p>
+      </div>
+
+      <div class="FilterSetting">
+        <input
+          type="range" 
+          min="-100"
+          max="100"
+          step="1"
+          value="0"
+          data-filter="contrast"
+        >
+        <span class="FilterValue">0</span>
+      </div>
+    </div>
+  
+    <div class="Filter">
+      <div class="FilterName">
+        <p>saturation</p>
+      </div>
+
+      <div class="FilterSetting">
+        <input
+          type="range" 
+          min="-100"
+          max="100"
+          step="1"
+          value="0"
+          data-filter="saturation"
+        >
+        <span class="FilterValue">0</span>
+      </div>
+    </div>
+  
+    <div class="Filter">
+      <div class="FilterName">
+        <p>vibrance</p>
+      </div>
+
+      <div class="FilterSetting">
+        <input
+          type="range" 
+          min="-100"
+          max="100"
+          step="1"
+          value="0"
+          data-filter="vibrance"
+        >
+        <span class="FilterValue">0</span>
+      </div>
+    </div>
+  
+    <div class="Filter">
+      <div class="FilterName">
+        <p>exposure</p>
+      </div>
+
+      <div class="FilterSetting">
+        <input
+          type="range" 
+          min="-100"
+          max="100"
+          step="1"
+          value="0"
+          data-filter="exposure"
+        >
+        <span class="FilterValue">0</span>
+      </div>
+    </div>
+  
+    <div class="Filter">
+      <div class="FilterName">
+        <p>hue</p>
+      </div>
+
+      <div class="FilterSetting">
+        <input
+          type="range" 
+          min="0"
+          max="100"
+          step="1"
+          value="0"
+          data-filter="hue"
+        >
+        <span class="FilterValue">0</span>
+      </div>
+    </div>
+  
+    <div class="Filter">
+      <div class="FilterName">
+        <p>sepia</p>
+      </div>
+
+      <div class="FilterSetting">
+        <input
+          type="range" 
+          min="0"
+          max="100"
+          step="1"
+          value="0"
+          data-filter="sepia"
+        >
+        <span class="FilterValue">0</span>
+      </div>
+    </div>
+  
+    <div class="Filter">
+      <div class="FilterName">
+        <p>gamma</p>
+      </div>
+
+      <div class="FilterSetting">
+        <input
+          type="range" 
+          min="0"
+          max="10"
+          step="0.1"
+          value="0"
+          data-filter="gamma"
+        >
+        <span class="FilterValue">0</span>
+      </div>
+    </div>
+  
+    <div class="Filter">
+      <div class="FilterName">
+        <p>noise</p>
+      </div>
+
+      <div class="FilterSetting">
+        <input
+          type="range" 
+          min="0"
+          max="100"
+          step="1"
+          value="0"
+          data-filter="noise"
+        >
+        <span class="FilterValue">0</span>
+      </div>
+    </div>
+  
+    <div class="Filter">
+      <div class="FilterName">
+        <p>clip</p>
+      </div>
+
+      <div class="FilterSetting">
+        <input
+          type="range" 
+          min="0"
+          max="100"
+          step="1"
+          value="0"
+          data-filter="clip"
+        >
+        <span class="FilterValue">0</span>
+      </div>
+    </div>
+  
+    <div class="Filter">
+      <div class="FilterName">
+        <p>sharpen</p>
+      </div>
+
+      <div class="FilterSetting">
+        <input
+          type="range" 
+          min="0"
+          max="100"
+          step="1"
+          value="0"
+          data-filter="sharpen"
+        >
+        <span class="FilterValue">0</span>
+      </div>
+    </div>
+  
+    <div class="Filter">
+      <div class="FilterName">
+        <p>stackBlur</p>
+      </div>
+
+      <div class="FilterSetting">
+        <input
+          type="range" 
+          min="0"
+          max="20"
+          step="1"
+          value="0"
+          data-filter="stackBlur"
+        >
+        <span class="FilterValue">0</span>
+      </div>
+    </div>
+  
+
+  <div class="Clear"></div>
+  </div>
+
+  <h3>Preset Examples</h3>
+  <p>CamanJS has a number of preset filters that show off how to generate consistent effects on many types of images.</p>
+
+  <img 
+    id="preset-example" 
+    src="/images/example2_600.jpg"
+    data-caman-hidpi="/images/example2_1200.jpg"
+  >
+
+  <div id="PresetFilters">
+  
+    <a data-preset="vintage">Vintage</a>
+  
+    <a data-preset="lomo">Lomo</a>
+  
+    <a data-preset="clarity">Clarity</a>
+  
+    <a data-preset="sinCity">Sin City</a>
+  
+    <a data-preset="sunrise">Sunrise</a>
+  
+    <a data-preset="crossProcess">Cross Process</a>
+  
+    <a data-preset="orangePeel">Orange Peel</a>
+  
+    <a data-preset="love">Love</a>
+  
+    <a data-preset="grungy">Grungy</a>
+  
+    <a data-preset="jarques">Jarques</a>
+  
+    <a data-preset="pinhole">Pinhole</a>
+  
+    <a data-preset="oldBoot">Old Boot</a>
+  
+    <a data-preset="glowingSun">Glowing Sun</a>
+  
+    <a data-preset="hazyDays">Hazy Days</a>
+  
+    <a data-preset="herMajesty">Her Majesty</a>
+  
+    <a data-preset="nostalgia">Nostalgia</a>
+  
+    <a data-preset="hemingway">Hemingway</a>
+  
+    <a data-preset="concentrate">Concentrate</a>
+
+    <a data-preset="blackAndWhite">Black and White</a>
+
+    <a data-preset="bright">Bright</a>
+  
+  </div>
+</div>
+</body>
+</html>
